@@ -1,0 +1,43 @@
+﻿<Window x:Class="Projekt___Kryptografia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt___Kryptografia"
+        mc:Ignorable="d"
+        Title="VigenereCrypt 2.0" Height="600" Width="850"
+		Background="DimGray">
+
+
+	<Grid HorizontalAlignment="Center" Width="800">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.3*"/>
+			<RowDefinition />
+			<RowDefinition Height="0.3*"/>
+			<RowDefinition />
+			<RowDefinition Height="0.3*"/>
+			<RowDefinition Height="0.3*"/>
+		</Grid.RowDefinitions>
+
+		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" Grid.Row="0" Margin="10">Original message:</TextBlock>
+		<TextBox Name="firstMessageBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="12" Margin="10,0" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
+		<Button Content="Encrypt" Name ="encryptButton" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Background="LightGreen" Click="encryptButton_Click" />
+		<TextBox Name="firstEncryptedMessage" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="12" Margin="10,0" Grid.Row="3" Background="LightGray"/>
+		<Button Content="Send" Name ="sendButton" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Click="sendButton_Click" />
+
+		<TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" Grid.Row="0" Grid.Column="1" Margin="10">Received message:</TextBlock>
+		<TextBox Name="secondMessageBox" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="12" Margin="10,0" Grid.Row="1" Grid.Column="1" Background="LightGray"/>
+		<Button Content="Decrypt" Name ="decryptButton" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Click="decryptButton_Click" />
+		<TextBox Name="secondEncryptedMessage" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="12" Margin="10,0" Grid.Row="3" Grid.Column="1" Background="LightGray"/>
+		<Button Content="Receive" Name ="receiveButton" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Click="receiveButton_Click" />
+  
+
+	</Grid>
+
+
+
+</Window>
